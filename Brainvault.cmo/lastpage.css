@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;1,300;1,400;1,800&display=swap');
+
+
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    color: white;
+    background-color: #1f242d;
+}
+.info-page{
+    /* min-height: 100vh; */
+    padding: 9rem 19% 2rem;
+
+}
+.heading{
+    text-align: left;
+    font-size: 3rem;
+    margin-top: 10px;
+    color: white;
+
+}
+
+.info-content p{
+    font-size: 1.4rem;
+}
+
+
+
+.faq{
+    width: 100%;
+    padding: 1rem 0rem;
+    cursor: pointer;
+}
+.questions{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.questions h3{
+    font-size: 2rem;
+}
+
+.questions h3:hover{
+    color:#0ef;
+    font-size: 2rem;
+}
+.answer p{
+
+    color: white;
+    font-size: 1.5rem;
+    
+}
+.answer{
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+.faq.active .answer{
+    max-height: 900px;
+    animation: fade 1s ease-in-out;
+
+}
+.faq.active svg{
+    transform: rotate(180deg);
+
+}
+svg{
+    transition: transform .5 ease-in;
+}
+@keyframes fade { 
+from { 
+    opacity: 0; transform: translateY(-10px); 
+ } 
+ to { 
+     opacity: 1; transform: translatey(0px);
+}
+}
+.fab-container{
+
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    cursor:pointer;
+    
+    }
+    .iconbutton{
+
+        width:50px;
+        height:50px;
+
+          background-color: #0ef;
+          box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+        border: 1px solid  #0ef;
+        border-radius: 100%;
+        }
+        .iconbutton:hover{
+             background-color: #1f242d;
+            }
+        
+        .button{
+        display: none;
+        width:10px;
+        height:10px;
+        }
+        .iconbutton i{
+            display:flex;
+            align-items:center;
+            justify-content:center;           
+            height: 100%;
+            color: #1f242d;
+            font-size: 1.5rem;
+            }
+            .iconbutton i:hover{
+                color: #0ef;
+            }
+            .options{
+                list-style-type: none;
+                position:absolute;
+                bottom: 10px;
+                right:0;    
+                }
+.options li{
+    display:flex;
+    justify-content:flex-end;
+    padding:5px;
+    }
+    .btn-label{
+        font-size: 1.2rem;
+        margin-right:10px;
+        align-self: center;
+        user-select:none;
+        color:white;
+        border-radius: 3px;
+        
+        }
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.iframe2{
+    /* margin-top: 3rem; */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 720px) {
+
+    .iframe2{
+        /* margin-top: 3rem; */
+        position: relative;
+        /* top: 0;
+        left: 0; */
+        width: 90%;
+        height: 100%;
+    }
+    .wrapper  {
+        position: relative;
+        width: 280px;
+        height: 400px;
+    }
+    .fab-container{
+        display: none;
+        
+        }
+        .info-page{
+            min-height: 100vh;
+            padding: 9rem 9% 2rem;
+        
+        }
+}
+h3{
+    padding: 10px 0px;
+    text-align: left;
+    font-size: 2.5rem;
+    color: white;
+}

@@ -1,0 +1,89 @@
+
+.Subjects{
+    min-height: 100vh;
+    padding: 9rem 9% 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+
+}
+.title{
+    font-size: 4rem;
+    margin: 2rem 0rem;
+
+}
+.faq{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #0ef;
+    cursor: pointer;
+}
+.questions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions h3{
+    font-size: 2rem;
+
+}
+.answer a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1rem 1rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    
+}
+.answer a:hover{
+    border-radius: 4px;
+    background-color: #1a1e25;
+    display: flex;
+    flex-direction: column;
+    color: #0ef;
+    padding: 1rem 1rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+
+    
+}
+.answer{
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.faq.active .answer{
+    max-height: 900px;
+    animation: fade 1s ease-in-out;
+
+}
+.faq.active svg{
+    transform: rotate(180deg);
+
+}
+svg{
+    transition: transform .5 ease-in;
+}
+@keyframes fade { 
+from { 
+    opacity: 0; transform: translateY(-10px); 
+ } 
+ to { 
+     opacity: 1; transform: translatey(0px);
+}
+}
+@media (max-width: 720px) {
+    .Subjects{
+        min-height: 60vh;
+        padding: 7rem 9% 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10rem;
+    
+    }
+}
